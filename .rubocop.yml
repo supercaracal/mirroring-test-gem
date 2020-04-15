@@ -1,0 +1,9 @@
+---
+require: rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 2.7
+  DisplayCopNames: true
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
