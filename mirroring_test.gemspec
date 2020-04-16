@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |s|
-  s.name        = 'mirroring-test'
-  s.version     = '0.0.2'
+  s.name        = 'mirroring_test'
+  s.version     = '0.0.3'
   s.date        = '2020-04-16'
   s.summary     = 'Call a same method for multiple receivers'
   s.description = 'Call a same method for multiple receivers'

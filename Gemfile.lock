@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mirroring-test (0.0.1)
+    mirroring_test (0.0.3)
 
 GEM
   remote: https://rubygems.org/
@@ -33,7 +33,7 @@ PLATFORMS
 
 DEPENDENCIES
   minitest
-  mirroring-test!
+  mirroring_test!
   rake
   rubocop
   rubocop-performance
