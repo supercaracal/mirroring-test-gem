@@ -24,7 +24,7 @@ class TestMirroringTest < Minitest::Test
     assert_equal([16, 25, 36], b)
   end
 
-  def test_respondable_method_calling
+  def test_defined_method_calling
     a = []
 
     mt = MirroringTest.new(a)
@@ -38,5 +38,17 @@ class TestMirroringTest < Minitest::Test
     mt = MirroringTest.new(a)
 
     assert_equal(false, mt.respond_to?(:unknown_method))
+  end
+
+  def test_class_impersonation
+    a = []
+
+    mt = MirroringTest.new(a)
+
+    assert_equal(Array, mt.class)
+    assert_equal(true, mt.is_a?(Array))
+    assert_equal(true, mt.kind_of?(Array)) # rubocop:disable Style/ClassCheck
+    assert_equal(true, mt.instance_of?(Array))
+    assert_instance_of(Array, mt)
   end
 end
