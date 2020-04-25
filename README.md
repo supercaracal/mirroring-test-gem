@@ -15,3 +15,5 @@ mt.map! { |e| e * e }
 # a => [1, 4, 9]
 # b => [16, 25, 36]
 ```
+
+NOTE: Don't use the gem with method chain.
