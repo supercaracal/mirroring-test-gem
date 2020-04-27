@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |s|
   s.name        = 'mirroring_test'
-  s.version     = '0.0.3'
-  s.date        = '2020-04-16'
+  s.version     = '0.0.4'
+  s.date        = '2020-04-27'
   s.summary     = 'Call a same method for multiple receivers'
   s.description = 'Call a same method for multiple receivers'
   s.authors     = ['Taishi Kasuga']

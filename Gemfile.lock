@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mirroring_test (0.0.3)
+    mirroring_test (0.0.4)
 
 GEM
   remote: https://rubygems.org/

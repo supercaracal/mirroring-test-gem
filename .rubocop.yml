@@ -7,3 +7,12 @@ AllCops:
 
 Gemspec/RequiredRubyVersion:
   Enabled: false
+
+Style/MethodMissingSuper:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 20

@@ -19,10 +19,24 @@ class MirroringTest
 
   private
 
-  def method_missing(method_name, *args, &block) # rubocop:disable Style/MethodMissingSuper
-    @receivers.map do |r|
-      r.send(method_name, *args, &block) if r.respond_to?(method_name)
+  def method_missing(method_name, *args, &block)
+    first_ret_pair = @receivers.map do |r|
+      ret = [nil, nil]
+
+      next(ret) unless r.respond_to?(method_name)
+
+      begin
+        ret[0] = r.send(method_name, *args, &block)
+      rescue StandardError => e
+        ret[1] = e
+      end
+
+      ret
     end.first
+
+    raise(first_ret_pair[1]) unless first_ret_pair[1].nil?
+
+    first_ret_pair[0]
   end
 
   def respond_to_missing?(symbol, include_private)
