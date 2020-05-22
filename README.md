@@ -16,4 +16,6 @@ mt.map! { |e| e * e }
 # b => [16, 25, 36]
 ```
 
-NOTE: Don't use the gem with method chain.
+NOTE: Don't use the gem when you call method chain.
+NOTE: Don't use the gem when you call destructive method with arguments by reference.
+NOTE: Don't use the gem when you call a method with destructive block.
